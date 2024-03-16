@@ -78,10 +78,21 @@ document.querySelectorAll('.js-add-to-cart').forEach((button) => {
                 productId: productId,
                 quantity: 1
             })
-            console.log(cart)
+            let cartQuantity = 0
+            cart.forEach((item) => {
+                cartQuantity += item.quantity
+
+            })
+            let results = document.querySelector('.js-cart-quantity').innerHTML = cartQuantity
+            console.log(results)
+
+
+            // console.log(cart)
 
         }
     })
 
 })
+
+
 
